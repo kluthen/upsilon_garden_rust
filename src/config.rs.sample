@@ -1,0 +1,13 @@
+pub static DB_USER: &'static str = "user";
+pub static DB_PASSWORD: &'static str ="password";
+pub static DB_NAME: &'static str = "db_name";
+pub static DB_HOST: &'static str ="host";
+pub static WEB_STATICS: &'static str = "web/static";
+pub static WEB_TEMPLATES: &'static str ="web/templates";
+pub static WEB_LAYOUTS:&'static str ="web/shared";
+pub static PLANT_TIME_TIC: i32 = 15;
+pub static PLANT_DD_TIC:  i32 = -20;
+pub static PLANT_ND_TIC:  i32 = -3;
+pub static PLANT_OK_TIC: i32 =  1;
+pub static PLANT_SUP_TIC:  i32 = 3;
+
