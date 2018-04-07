@@ -1,3 +1,6 @@
+#![feature(plugin)]
+#![plugin(rocket_codegen)]
+
 #[macro_use]
 extern crate log;
 extern crate env_logger;
@@ -12,9 +15,15 @@ extern crate rand;
 extern crate postgres;
 
 
+extern crate rocket;
+extern crate rocket_contrib;
+
+
+
 // loads .env : configuraiton stuff.
 mod config;
 mod db;
+mod web;
 mod engine; 
 
 #[allow(dead_code)]
@@ -35,11 +44,13 @@ fn test_db() {
     }
 }
 
+
 fn main() {    
     env_logger::init();
     test_db();
-    
 
+    web::server::setup();
+    
     info!("starting up");
 
 }
